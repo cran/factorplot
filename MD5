@@ -1,0 +1,11 @@
+3cba5da9ac1a1d9ece4bdaf035d53759 *DESCRIPTION
+a1e54cf5d454e011ee24a29d93cf0f12 *NAMESPACE
+0432a4fd5307314a9edcb5e8f355cda6 *R/factorplot.R
+9ba2136075b0f1b166a25e31c7c9af66 *data/france.rda
+623e4d8111ebb2ae96eeedf9900293ad *man/factorplot-package.Rd
+eb4c7462be6621f4658eba95edd8271f *man/factorplot.Rd
+d569da68d64477201b17fee109111300 *man/france.Rd
+7035883739219d3dc719d093899d5482 *man/plot.factorplot.Rd
+30e2d4610a1bb1d587a4a3f53f76fb46 *man/print.factorplot.Rd
+60f00e603486847c50e63aead3965356 *man/squares.Rd
+bb51f3016e24bcd22ea7cb706e3d0dd4 *man/summary.factorplot.Rd
