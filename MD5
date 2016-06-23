@@ -1,9 +1,9 @@
-4fe11da4e54e08bf61c35bdd313172b7 *DESCRIPTION
-9747fb6b70fcc5f24d20add52964a1ef *NAMESPACE
-73d2f9527b102122aea5040ca526f6ae *R/factorplot.R
+c4f071a08912d74dd39190fb70496c3c *DESCRIPTION
+25558a47f39d1924bac99244ef9b7d4c *NAMESPACE
+6cc7226e7b2d807045b1187362a0a7b7 *R/factorplot.R
 9ba2136075b0f1b166a25e31c7c9af66 *data/france.rda
 623e4d8111ebb2ae96eeedf9900293ad *man/factorplot-package.Rd
-eb4c7462be6621f4658eba95edd8271f *man/factorplot.Rd
+837650dc9f288b35c5c3a4649cedfe08 *man/factorplot.Rd
 d569da68d64477201b17fee109111300 *man/france.Rd
 7035883739219d3dc719d093899d5482 *man/plot.factorplot.Rd
 30e2d4610a1bb1d587a4a3f53f76fb46 *man/print.factorplot.Rd
