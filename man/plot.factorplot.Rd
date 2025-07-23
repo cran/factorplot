@@ -21,7 +21,7 @@
 }
 \arguments{
 \item{x}{An object of class factorplot, produced by
-\code{\link{factorplot}}.}
+\code{\link[factorplot]{factorplot}}.}
 
 \item{...}{Other arguments to be passed to plot, currently not implemented}
 
@@ -97,7 +97,7 @@ plot(plummer_fp1, trans="exp", abbrev.char = 100)
 
 }
 \seealso{
-\code{\link{factorplot}}
+\code{\link[factorplot]{factorplot}}
 }
 \author{
 Dave Armstrong

@@ -7,7 +7,7 @@
 \method{summary}{factorplot}(object, ...)
 }
 \arguments{
-\item{object}{An object of class \code{\link{factorplot}}}
+\item{object}{An object of class \code{\link[factorplot]{factorplot}}}
 
 \item{\dots}{Other arguments passed to summary, currently not implemented}
 }
@@ -18,7 +18,7 @@ from each other.}
 }
 \description{
 Summarizes the number of significant positive and negative differences for
-objects of class \code{\link{factorplot}}
+objects of class \code{\link[factorplot]{factorplot}}
 }
 \examples{
 
@@ -34,7 +34,7 @@ summary(fp)
 
 }
 \seealso{
-\code{\link{factorplot}}
+\code{\link[factorplot]{factorplot}}
 }
 \author{
 Dave Armstrong

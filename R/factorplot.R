@@ -1,9 +1,9 @@
 #' Calculate Pairwise Differences
 #' 
 #' This function calculates all pairwise difference from the input data.  The
-#' input data can be the result of a GLM (produced with \code{\link{glm}}), a
+#' input data can be the result of a GLM (produced with \code{\link[stats]{glm}}), a
 #' multinomial logit model (produced with \code{multinom} from the \pkg{nnet}
-#' package), a general linear hypothesis test (produced with \code{\link{glht}}
+#' package), a general linear hypothesis test (produced with \code{\link[multcomp]{glht}}
 #' from the \pkg{multcomp} package), an object of class \code{eff} from the
 #' \code{effects} package or any vector of values and a corresponding
 #' variance-covariance matrix.
@@ -53,18 +53,18 @@
 #' the factor contrasts.  \sQuote{alph} sorts the levels alphabetically and
 #' \sQuote{size} sorts the levels by size of coefficient.
 #' @param adjust.method For objects of class \code{multinom} and \code{numeric}
-#' - one of the methods allowed by \code{\link{p.adjust}} in \pkg{stats} -
+#' - one of the methods allowed by \code{\link[stats]{p.adjust}} in \pkg{stats} -
 #' \sQuote{holm}, \sQuote{hochberg}, \sQuote{hommel}, \sQuote{bonferroni},
 #' \sQuote{BH}, \sQuote{BY}, \sQuote{fdr}, \sQuote{none}.  See help for the
-#' \code{\link{p.adjust}} for more information on these different adjustment
+#' \code{\link[stats]{p.adjust}} for more information on these different adjustment
 #' methods.  For objects of class \code{glm}, \code{lm} or \code{glht},
 #' additional arguments of \sQuote{single-step}, \sQuote{Shaffer},
-#' \sQuote{Westfall} and \sQuote{free} are possible.  See \code{\link{glht}}
+#' \sQuote{Westfall} and \sQuote{free} are possible.  See \code{\link[multcomp]{glht}}
 #' from the \pkg{multcomp} package for details.
 #' @param ordby For objects of class \code{eff} with interactions, \code{ordby}
 #' is a string indicating the variable by which the plot should be ordered.
 #' @param \dots Additional arguments to be passed to
-#' \code{\link{summary.glht}}, including, but not limited to \code{level} and
+#' \code{\link[multcomp]{summary.glht}}, including, but not limited to \code{level} and
 #' \code{alternative}.
 #' @return \item{b.diff}{An upper-triangular matrix of pairwise differences
 #' between row and column levels of the factor} \item{b.sd}{An upper-triangular
@@ -465,9 +465,9 @@ factorplot.multinom <- function(obj, adjust.method="none", order="natural", vari
 #' Auxiliary Function to Plot a Square
 #' 
 #' An auxiliary function to plot squares, used by the
-#' \code{\link{plot.factorplot}} function
+#' \code{\link[factorplot]{plot.factorplot}} function
 #' 
-#' This is a function called by \code{\link{plot.factorplot}} and not intended
+#' This is a function called by \code{\link[factorplot]{plot.factorplot}} and not intended
 #' to be directly used by the user; however, it is possible that this could be
 #' of more general use as a utility.  The function is simply a wrapper to
 #' \code{polygon} that obviates the need to specify all (\code{x},\code{y})
@@ -498,7 +498,7 @@ squares <- function(ll, width=1,col){
 #' 
 #' 
 #' @param x An object of class factorplot, produced by
-#' \code{\link{factorplot}}.
+#' \code{\link[factorplot]{factorplot}}.
 #' @param abbrev.char The number of characters that should be used to
 #' abbreviate the levels of the factor.  Set to a large value for unabbreviated
 #' names.
@@ -536,7 +536,7 @@ squares <- function(ll, width=1,col){
 #' on the linear scale (unless a transformation is performed).}
 #' @export
 #' @author Dave Armstrong
-#' @seealso \code{\link{factorplot}}
+#' @seealso \code{\link[factorplot]{factorplot}}
 #' @examples
 #' 
 #' est1 <- log(c(1.00,2.12,1.44,1.31,1.44,
@@ -631,13 +631,13 @@ legend(1+leg$rect$w*as.numeric(print.sig.leg), 1, c(expression(bold("bold = ")~b
 
 #' Print method for objects of class factorplot
 #' 
-#' Prints the output from an object of class \code{\link{factorplot}}.  By
+#' Prints the output from an object of class \code{\link[factorplot]{factorplot}}.  By
 #' default, the function prints all pairwise differences along with standard
 #' errors and p-values (optionally adjusted for multiple testing). Optionally,
 #' it can print only significant differences.
 #' 
 #' 
-#' @param x An object of class \code{\link{factorplot}}.
+#' @param x An object of class \code{\link[factorplot]{factorplot}}.
 #' @param digits The number of digits to print in each column
 #' @param trans A character string representing the post-hypothesis-testing
 #' transformation to be performed on the estimates.  For example, if the
@@ -654,7 +654,7 @@ legend(1+leg$rect$w*as.numeric(print.sig.leg), 1, c(expression(bold("bold = ")~b
 #' linear scale. }
 #' @export
 #' @author Dave Armstrong
-#' @seealso \code{\link{factorplot}}
+#' @seealso \code{\link[factorplot]{factorplot}}
 #' @examples
 #' 
 #' est1 <- log(c(1.00,2.12,1.44,1.31,1.44,
@@ -708,17 +708,17 @@ print.factorplot <- function(x, ..., digits=3, sig=FALSE, trans=NULL){
 #' Summary method for objects of class factorplot
 #' 
 #' Summarizes the number of significant positive and negative differences for
-#' objects of class \code{\link{factorplot}}
+#' objects of class \code{\link[factorplot]{factorplot}}
 #' 
 #' 
-#' @param object An object of class \code{\link{factorplot}}
+#' @param object An object of class \code{\link[factorplot]{factorplot}}
 #' @param \dots Other arguments passed to summary, currently not implemented
 #' @return \item{Printed Output}{The printed output summarises the number of 
 #' stimuli that are significantly higher or lower and not significantly different
 #' from each other.}
 #' @export
 #' @author Dave Armstrong
-#' @seealso \code{\link{factorplot}}
+#' @seealso \code{\link[factorplot]{factorplot}}
 #' @examples
 #' 
 #' x <- as.factor(round(runif(1000, .5,5.5)))
